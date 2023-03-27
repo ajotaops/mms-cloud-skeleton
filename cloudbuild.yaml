@@ -4,9 +4,9 @@ steps:
   args:
     - 'build'
     - '-t'
-    - '$LOCATION-docker.pkg.dev/$PROJECT_ID/$ARTIFACTORY_NAME/$REPO_NAME:$COMMIT_SHA'
+    - '$LOCATION-docker.pkg.dev/$PROJECT_ID/$_ARTIFACTORY_NAME/$REPO_NAME:$COMMIT_SHA'
     - '-t'
-    - '$LOCATION-docker.pkg.dev/$PROJECT_ID/$ARTIFACTORY_NAME/$REPO_NAME:latest'
+    - '$LOCATION-docker.pkg.dev/$PROJECT_ID/$_ARTIFACTORY_NAME/$REPO_NAME:latest'
     - '.'
 #Push image
 - name: 'gcr.io/cloud-builders/docker'

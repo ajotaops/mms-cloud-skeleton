@@ -26,3 +26,8 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+#Terraform
+terraform/.terraform
+auth/
+terraform/*terraform.tfvars

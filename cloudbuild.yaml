@@ -12,5 +12,5 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args:
     - 'push'
-    - '$LOCATION-docker.pkg.dev/$PROJECT_ID/$_ARTIFACTORY_NAME/$REPO_NAME:$COMMIT_SHA'
+    - '$LOCATION-docker.pkg.dev/$PROJECT_ID/$_ARTIFACTORY_NAME/$REPO_NAME'
     - '--all-tags'

@@ -1,0 +1,2 @@
+variable "vpcs" {}
+variable "name" {}

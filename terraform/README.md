@@ -6,7 +6,8 @@ To setup this terraform project we need to have some prerequisites.
 3. Cloud Resource Manager API activated.
 4. Service account.
 5. Github oatuh token.
-6. Github Cloud Build app installed and installation id.
+6. Github Cloud Build app installed (https://github.com/marketplace/google-cloud-build)
+7. Installation id cloud build (see on https://github.com/settings/installations)
 
 ## Setup:
 
@@ -20,6 +21,6 @@ Now run init terraform command (substitute the bucket name with yours bucket.):
 
     terraform init -backend-config="bucket=terraform-mms"
 
-Now apply terraform and apply
+Now run terraform and apply
 
     terraform apply

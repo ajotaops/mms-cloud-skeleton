@@ -85,6 +85,7 @@ module "k8s-app" {
   host = module.gke.host
   token = module.gke.token
   cluster_ca_certificate = module.gke.cluster_ca_certificate
-  app = "mms-cloud-skeleton"
   artifactory = "${var.region}-docker.pkg.dev/${var.project}/${module.artifactory.artifactory}"
+  app = "mms-cloud-skeleton"
+  commit_sha = ""
 }

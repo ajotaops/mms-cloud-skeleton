@@ -12,3 +12,14 @@ resource "google_compute_subnetwork" "default" {
   private_ip_google_access = true
 }
 
+resource "google_compute_firewall" "http" {
+  name          = "http"
+  network       = google_compute_network.default.name
+
+  allow {
+    protocol    = "tcp"
+    ports       = ["30000"]
+  }
+
+  source_ranges = ["0.0.0.0/0"]
+}

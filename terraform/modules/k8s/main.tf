@@ -17,25 +17,25 @@ resource "kubernetes_deployment_v1" "app" {
   metadata {
     name = var.app
     labels = {
-      test = var.app
+      app = var.app
     }
   }
   spec {
     replicas = 3
     selector {
       match_labels = {
-        test = var.app
+        app = var.app
       }
     }
     template {
       metadata {
         labels = {
-          test = var.app
+          app = var.app
         }
       }
       spec {
         container {
-          image = "${var.artifactory}/${var.app}:latest"
+          image = "${var.artifactory}/${var.app}:${var.commit_sha}"
           name  = var.app
           port{
             container_port = 3000
@@ -70,11 +70,11 @@ resource "kubernetes_service" "service" {
   }
   spec {
     selector = {
-      App = var.app
+      app = var.app
     }
     port {
       node_port = 30000
-      port = 80
+      port = 3000
       target_port = 3000
     }
     type = "NodePort"

@@ -1,0 +1,22 @@
+#Global project
+project = "mms-cloud-skeleton"
+region = "europe-west1"
+zone = "europe-west1-b"
+
+#VPC
+vpcs = {
+    "europe-west1" = "10.200.0.0/16"
+  }
+
+#Github
+github_token = ""
+github_app_id = 35714196
+github_user = "ajotaops"
+github_repos = [
+  "mms-cloud-skeleton"
+]
+
+#GKE
+gke_so = "ubuntu_containerd"
+gke_node_machine = "e2-small"
+gke_disk = 20

@@ -19,6 +19,6 @@ resource "google_cloudbuild_trigger" "trigger" {
   substitutions = {
     _ARTIFACTORY_NAME = var.artifactory
   }
-  ignored_files = ["terraform/"]
+  ignored_files = ["**terraform**"]
   filename = "cloudbuild.yaml"
 }

@@ -87,5 +87,5 @@ module "k8s-app" {
   cluster_ca_certificate = module.gke.cluster_ca_certificate
   artifactory = "${var.region}-docker.pkg.dev/${var.project}/${module.artifactory.artifactory}"
   app = "mms-cloud-skeleton"
-  commit_sha = ""
+  commit_sha = "6b1c79f64ace4bb1ae2ffaf2ec7836303bd0566f"
 }
